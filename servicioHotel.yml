@@ -15,6 +15,6 @@ spring:
 eureka:
   client:
     service-url: 
-      defaultzone: http://eureka-server:8761/eureka
+      defaultzone: http://192.168.3.30:8761/eureka
   instance:
     instance-id: instancia01
