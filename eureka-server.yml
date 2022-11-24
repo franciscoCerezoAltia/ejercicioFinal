@@ -17,5 +17,4 @@ spring:
 
 eureka:
   instance:
-    ip-address: 192.168.3.30
     prefer-ip-address: true
