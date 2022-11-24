@@ -1,7 +1,6 @@
 eureka:
   client:
-    serviceUrl: 
-      defaultzone: http://192.168.3.30:8761/eureka
+    serviceUrl: http://192.168.3.30:8761/eureka
 
 spring:
   datasource:
