@@ -8,3 +8,15 @@ eureka:
     register-with-eureka: false
   instance:
     hostName: 192.168.3.30      
+
+spring:
+  cloud:    
+    inetutils:
+      default-hostname: 192.168.3.30
+      timeout-seconds: 5
+
+eureka:
+  instance:
+    ip-address: 192.168.3.30
+    prefer-ip-address: true
+    preferIpAddress: true
