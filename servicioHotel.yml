@@ -18,7 +18,4 @@ eureka:
       defaultzone: http://192.168.3.30:8761/eureka
   instance:
     hostName: 192.168.3.30
-eureka:
-  instance:
-    ip-address: 192.168.3.30
     prefer-ip-address: true
