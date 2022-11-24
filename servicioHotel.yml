@@ -19,3 +19,4 @@ eureka:
   instance:
     prefer-ip-address: true
     preferIpAddress: 192.168.3.30
+    hostname: 192.168.3.30
