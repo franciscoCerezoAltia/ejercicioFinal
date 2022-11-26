@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: servicioVuelo
+  cloud:
+    config:
+      uri: http://192.168.3.30:8888
+server:
+  port: 8181
+eureka:
+  instance:
+    instance-id: instancia01

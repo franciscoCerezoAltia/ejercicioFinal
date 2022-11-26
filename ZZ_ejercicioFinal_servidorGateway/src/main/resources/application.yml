@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: servidor-gateway   
+  cloud: 
+   gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+              allowedOrigins: "*"
+              allowedMethods: "*"
+              allowedHeaders: "*"   
+      routes:
+      - id: servHotel #Id de la ruta 
+        uri: lb://servicioHotel
+        predicates:
+          - Path=/shotel/** 
+        filters:
+          - RewritePath=/shotel/*, /
+          
+      - id: servVuelo
+        uri: lb://servicioVuelo 
+        predicates:
+          - Path=/svuelo/**
+        filters:
+          - RewritePath=/svuelo/*, /    
+          
+      - id: servReservas
+        uri: lb://servicioReservas 
+        predicates:
+          - Path=/sreservas/**
+        filters:
+          - RewritePath=/sreservas/*, /
+          
+server:
+  port: 9100
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://192.168.3.30:8761/eureka
+  instance:
+    hostname: http:192.168.3.30
+
